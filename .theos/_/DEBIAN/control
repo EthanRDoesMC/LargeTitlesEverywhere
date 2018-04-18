@@ -1,0 +1,10 @@
+Package: tk.ethanrdoesmc.largetitles
+Name: LargeTitlesEverywhere
+Depends: mobilesubstrate, firmware (>= 11.0)
+Architecture: iphoneos-arm
+Description: Makes every NavigationBar title use the large style.
+Maintainer: EthanRDoesMC
+Author: EthanRDoesMC
+Section: Tweaks
+Version: 1.0.0
+Installed-Size: 120
