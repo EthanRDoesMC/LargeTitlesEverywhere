@@ -32,6 +32,9 @@ the generation of a class list and an automatic constructor.
 // Always make sure you clean up after yourself; Not doing so could have grave consequences!
 %end
 */
+
+
+%group start
 %hook UINavigationBar
 
 
@@ -51,3 +54,18 @@ the generation of a class list and an automatic constructor.
 }
 
 %end
+%end
+
+%ctor {
+    
+
+NSString *identifier = [NSBundle mainBundle].bundleIdentifier;
+    NSString *plistPath = @"/User/Library/Preferences/tk.ethanrdoesmc.lte.plist";
+    NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    if ([[plistDict objectForKey:identifier] boolValue]) {
+    //if (![identifier isEqualToString:sbBundle]) {
+        %init(start);
+    }
+    //}
+    
+}

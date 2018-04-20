@@ -1,0 +1,32 @@
+{
+	entry = {
+		bundle = AppList;
+		cell = PSLinkCell;
+		icon = "/Library/PreferenceLoader/Preferences/LTEIcon.png";
+		isController = 1;
+		label = "LargeTitlesEverywhere";
+		ALSettingsPath = "/var/mobile/Library/Preferences/tk.ethanrdoesmc.lte.plist";
+		ALSettingsKeyPrefix = "";
+		ALChangeNotification = "tk.ethanrdoesmc.lte.updated";
+		ALAllowsSelection = 1;
+		ALSectionDescriptors = (
+			{
+				title = "System Applications";
+				predicate = "isSystemApplication = TRUE";
+				"cell-class-name" = ALSwitchCell;
+				"icon-size" = 29;
+				"suppress-hidden-apps" = 1;
+				default = 1;
+			},
+			{
+				title = "User Applications";
+				predicate = "isSystemApplication = FALSE";
+				"cell-class-name" = ALSwitchCell;
+				"icon-size" = 29;
+				"suppress-hidden-apps" = 1;
+				default = 1;
+				"footer-title" = "Created by EthanRDoesMC";
+			},
+		);
+	};
+}

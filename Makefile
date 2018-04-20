@@ -3,6 +3,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = LargeTitlesEverywhere
 LargeTitlesEverywhere_FILES = Tweak.xm
+LargeTitlesEverywhere_LIBRARIES = applist
 
 
 
